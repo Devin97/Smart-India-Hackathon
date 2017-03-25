@@ -16,7 +16,7 @@ from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
 from rest_framework import status
 
-
+##############################################################
 # api/customtest/
 class CustomTestList(APIView):
 
@@ -25,6 +25,11 @@ class CustomTestList(APIView):
 		customtests = CustomTest.objects.all()
 		serializer = CustomTestSerializer(customtests, many=True)
 		return Response(serializer.data)
+##############################################################
+
+# api/trainingcenter/
+# Takes training center district as a request parameter 
+# and returns all the training centers based on the district
 
 class TrainingCenterList(APIView):
 	
@@ -36,6 +41,11 @@ class TrainingCenterList(APIView):
 		serializer = TrainingCenterSerializer(trainingcenters, many=True)
 		return Response({'data':serializer.data})
 
+##############################################################
+
+# api/singletrainingcenter
+# Takes Center Id as a request parameter and returns the details of the 
+# training center based on the center id
 
 class SingleTrainingCenter(APIView):
 
@@ -51,6 +61,14 @@ class SingleTrainingCenter(APIView):
 			return Response({'data':serializer.data})
 		except:
 			return Response(False)
+
+##############################################################
+
+# api/candidates/
+# get() -- returns the details of all the candidates
+# post() -- Takes App user Email as a request parameter 
+	# and returns the details of the user based on the User Email 
+	# to check if the "user registrations status" is "True" or "False"
 
 """
 Candidate information Lists and registraion 
@@ -68,6 +86,13 @@ class CandidateList(APIView):
 		serializer = CandidateRegistrationSerializer(candidate)
 		return Response(serializer.data)
 
+##############################################################
+
+# api/candidates/
+# Takes the whole candidate registration credentials as request parameter
+# and registers a candidate 
+# also sets the "user registrations status" by using app user email
+
 class CandidateRegister(APIView):
 
 	def post(self, request, format=None):
@@ -83,12 +108,23 @@ class CandidateRegister(APIView):
 			return Response(True)
 		return Response(False)
 
+##############################################################
+
+# api/batchinfolist/
+# returns all the batch details		
+
 class BatchInfoList(APIView):
 
 	def get(self, request, format=None):
 		batchlist = BatchInfo.objects.all()
 		serializer = BatchInfoSerializer(batchlist, many=True)
 		return Response({'data':serializer.data})
+
+##############################################################
+
+# api/batchinfocourse/
+# Takes Training Center Id and Course Id as a request parameter 
+# and returns the batch details based on the parameters		
 
 class BatchInfoCourse(APIView):
 
@@ -100,9 +136,18 @@ class BatchInfoCourse(APIView):
 		batchlist = courseobj.batchinfo_set.filter(training_center_id=center_id.id)
 		serializer = BatchInfoSerializer(batchlist, many=True)
 		return Response(serializer.data)
+
+##############################################################
+
+# api/users/
+# get() -- returns the details of all the users
+# post() -- Takes all the user registrations credentials as a request parameter 
+	# and returns "True" if registrations is successful or "False" if Not
+
 """
 	Login Singup credentials - register, login check
 """
+
 class AppUserView(APIView):
     """
     List all snippets, or create a new snippet.
@@ -125,6 +170,12 @@ class AppUserView(APIView):
 	    		return Response(True, status=status.HTTP_201_CREATED)
 	    	return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+##############################################################	   
+
+# api/logincheck/
+# Takes User Email and User Password as a request parameter 
+# and uses it for authentication purpose
+
 class LoginCheck(APIView):
 
 	def post(self, request, format=None):
@@ -140,6 +191,12 @@ class LoginCheck(APIView):
 			return Response(False, status=status.HTTP_400_BAD_REQUEST)
 		except:
 			return Response(False, status=status.HTTP_400_BAD_REQUEST)
+
+##############################################################
+
+# api/jobroledata/
+# returns all the job roles			
+
 """
 JobRole, Course and Batch API's
 """
@@ -149,6 +206,13 @@ class JobRoleData(APIView):
 		jobroles = JobRole.objects.all()
 		serializer = JobRoleSerializer(jobroles, many=True)
 		return Response({'data':serializer.data})			
+
+##############################################################
+
+# api/coursedata/
+# get() -- returns details of all the courses
+# post() -- Takes Job Role name as a request parameter 
+	# and returns all the course list based on the parameter
 
 class CourseData(APIView):
 	
@@ -166,6 +230,12 @@ class CourseData(APIView):
 		serializer = CourseInfoSerializer(courselist, many=True)
 		return Response(serializer.data)
 
+##############################################################
+
+# api/fetchtrainingcentercourse/
+# Takes Training Center Id as a request parameter
+# and returns all the courses provided by 		
+
 class FetchTrainingCenterCourse(APIView):
 
 	def post(self, request, format=None):
@@ -174,3 +244,5 @@ class FetchTrainingCenterCourse(APIView):
 		datalist = TrainingCenterCourse.objects.filter(training_center_id=t_id)
 		serializer = TrainingCenterCourseSerializer(datalist, many=True)
 		return Response({'data':serializer.data})
+		
+##############################################################		
