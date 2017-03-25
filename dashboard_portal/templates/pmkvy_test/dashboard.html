@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--script language="Javascript" src="jquery.js"></script>
+		<script type="text/JavaScript" src='state.js'></script-->
+	    <link rel="stylesheet" type="text/css" href="{% static 'pmkvy_test/dashboard.css' %}">
+		<!--link rel="stylesheet" href="base_style.css"-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans">
+		<!--script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script-->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+				
+		<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+		
+		<title>Website</title>
+	</head>
+
+	<body>
+	<nav>
+		<div class="container">
+				<a href="#" class="nav-logo">
+					<div class="nav-logo-img"></div>
+				</a>
+				<ul>
+					<li><a href="#" class="active">Home</a></li><!--
+					--><li><a href="#">About</a></li><!--
+					--><li><a href="#">Work</a></li><!--
+					--><li class="dropdown">
+							<a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+							<div class="dropdown-content">
+								<a href="#">Link 1</a>
+								<a href="#">Link 2</a>
+								<a href="#">Link 3</a>
+							</div>
+						</li><!--
+					--><li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="main-wrapper">
+				<div class="left-panel">
+					<div class="left-panel-container">
+						<ul>
+							<a href="#"><li>Update Center Detail </li></a>
+							<a href="#"><li>Manage Student List</li></a>
+							<a href="#"><li>Update Course/Batch Details</li></a>
+							<a href="#"><li>Add News/Notice</li></a>
+						</ul>
+					</div>
+				</div>
+				<div class="right-panel">
+					<div class="update-center-info-div">
+						<div class="module-header">
+							Update Center Information
+						</div>
+					</div>
+					<form action="#" method="post"> 
+						<div class="update-center-info-div md-whiteframe-2dp">
+							<table>
+								<div class="module-header-branch">
+									General Center Information
+								</div>	
+								<tr>
+									<td>Center Name</td>
+									<td><input id="c_name" type="text" value="{{ result.training_center_name }}"></td>
+								</tr>
+								<tr>
+									<td>Center Id</td>
+									<td class="table-data-right"><input id="c_id" type="text" value="{{ result.center_id }}" disabled></td>
+								</tr>
+								<tr>
+									<td>Center Address</td>
+									<td><textarea name="address" id="c_addr" cols="30" rows="4">{{ result.address }}</textarea></td>
+								</tr>
+							</table>
+						</div>
+						<div class="update-center-info-div md-whiteframe-2dp">
+							<table>
+								<div class="module-header-branch">
+									Training Partner Information
+								</div>	
+								<tr>
+									<td>Name</td>
+									<td><input id="c_partner_name" type="text" value="{{ result.training_partner }}"></td>
+								</tr>
+								<tr>
+									<td>Email</td>
+									<td><input id="c_partner_email" type="text"></td>
+								</tr>
+							</table>
+						</div>
+						<div class="update-center-info-div md-whiteframe-2dp">
+							<table>
+								<div class="module-header-branch">
+									Contact Details
+								</div>	
+								<tr>
+									<td>Center POC Name</td>
+									<td><input id="c_poc_name" type="text" value="{{ result.center_poc_name}}"></td>
+								</tr>
+								<tr>
+									<td>Center POC Email</td>
+									<td><input id="c_poc_email" type="text" value="{{ result.center_poc_email }}"></td>
+								</tr>
+							</table>
+						</div>
+						<input id="c_button" class="update-button md-whiteframe-4dp" type="submit" value="Update">
+					</div>
+				</form>		
+		</div>
+	</body>
+</html>	
