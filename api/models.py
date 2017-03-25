@@ -183,3 +183,38 @@ class TrainingCenterCourse(models.Model):
     def __str__(self):
         return "%s : %s" % (self.training_center_id, self.course_id)
 
+class StudentCourseRegistration(models.Model):
+    scr_user_id = models.ForeignKey(AppUser, on_delete=models.CASCADE, default=None)
+    scr_course_id = models.ForeignKey(CourseInfo, on_delete=models.CASCADE, default=None)
+    scr_training_center_id = models.ForeignKey(TrainingCenter, on_delete=models.CASCADE, default='')
+    scr_registration_date = models.DateField(default=timezone.now)
+    scr_is_completed = models.BooleanField(default=False)
+    scr_completion_date = models.DateField(default=timezone.now)
+
+    def __str__(self):
+        return "%s : %s : %s" % (self.scr_user_id, self.scr_course_id, self.scr_registration_date)
+
+class CourseFeedbackDetail(models.Model):
+    cfd_training_center_id = models.ForeignKey(TrainingCenter, on_delete=models.CASCADE)
+    cfd_course_id = models.ForeignKey(CourseInfo, on_delete=models.CASCADE)
+    cfd_user_id = models.ForeignKey(AppUser, on_delete=models.CASCADE)
+    cfd_subject = models.CharField(max_length=255, blank=True)
+    cfd_detail = models.TextField(blank=True)
+    cfd_feedback_date = models.DateField(default=timezone.now)
+    cfd_rating = models.IntegerField(default=1)
+
+    def __str__(self):
+        return "%s" % self.cfd_subject
+
+class StateIndia(models.Model):
+    si_name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.si_name
+
+class StatewiseDistrict(models.Model):
+    sd_district_name = models.CharField(max_length=255)
+    sd_state_id = models.ForeignKey(StateIndia, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.sd_district_name
