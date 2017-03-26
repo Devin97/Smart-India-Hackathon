@@ -25,7 +25,7 @@ SECRET_KEY = '=aqdzurm(0ezf4c9#(&tb$do+_^vo51ew*6owl_t=$9b*tlz58'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['85c3ef60.ngrok.io','localhost','127.0.0.1','192.168.43.5','192.168.1.5']
+ALLOWED_HOSTS = ['3f8c5069.ngrok.io','localhost','127.0.0.1','192.168.43.5','192.168.1.5']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'rest_framework',
     'training_center.apps.TrainingCenterConfig',
+    'dashboard_portal.apps.DashboardPortalConfig',
 ]
 
 MIDDLEWARE_CLASSES = [

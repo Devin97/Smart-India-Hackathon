@@ -3,8 +3,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!--script language="Javascript" src="jquery.js"></script>
-		<script type="text/JavaScript" src='state.js'></script-->
+		<script language="Javascript" src="jquery.js"></script>
+		<!--script type="text/JavaScript" src='state.js'></script-->
 	    <link rel="stylesheet" type="text/css" href="{% static 'pmkvy_test/dashboard.css' %}">
 		<!--link rel="stylesheet" href="base_style.css"-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans">
@@ -15,6 +15,11 @@
 		<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 		
 		<title>Website</title>
+		
+		<script>
+			setInterval(function() { ObserveInputValue($('#c_name').val()); }, 1);
+		</script>
+
 	</head>
 
 	<body>
@@ -52,12 +57,13 @@
 					</div>
 				</div>
 				<div class="right-panel">
-					<div class="update-center-info-div">
+					<div class="update-center-info-div">	
 						<div class="module-header">
 							Update Center Information
 						</div>
 					</div>
-					<form action="#" method="post"> 
+					<form action="{% url 'dashboard:update' %}" method="post"> 
+						{% csrf_token %}
 						<div class="update-center-info-div md-whiteframe-2dp">
 							<table>
 								<div class="module-header-branch">
@@ -86,10 +92,10 @@
 									<td>Name</td>
 									<td><input id="c_partner_name" type="text" value="{{ result.training_partner }}"></td>
 								</tr>
-								<tr>
+								<!--tr>
 									<td>Email</td>
 									<td><input id="c_partner_email" type="text"></td>
-								</tr>
+								</tr-->
 							</table>
 						</div>
 						<div class="update-center-info-div md-whiteframe-2dp">
@@ -99,7 +105,7 @@
 								</div>	
 								<tr>
 									<td>Center POC Name</td>
-									<td><input id="c_poc_name" type="text" value="{{ result.center_poc_name}}"></td>
+									<td><input id="c_poc_name" type="text" value="{{ result.center_poc_name }}"></td>
 								</tr>
 								<tr>
 									<td>Center POC Email</td>
@@ -107,7 +113,7 @@
 								</tr>
 							</table>
 						</div>
-						<input id="c_button" class="update-button md-whiteframe-4dp" type="submit" value="Update">
+						<input id="c_button" class="update-button md-whiteframe-4dp" type="submit" value="Update" onclick="saveall()">
 					</div>
 				</form>		
 		</div>
