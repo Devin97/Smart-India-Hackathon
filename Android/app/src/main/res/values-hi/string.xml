@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">hindi mai PMKVY</string>
+    <string name="goto_training_centre"> Training Centre mai jao</string>
+    <string name="goto_sign_up">Jao Sign UP mai</string>
+    <string name="centre_name_centre_info">Centre Name </string>
+    <string name="address_centre_info">Address </string>
+    <string name="district_centre_infor">District </string>
+    <string name="state_centre_info">State </string>
+    <string name="centre_poc_details"> <u>Centre POC Details</u> </string>
+    <string name="centre_details"> <u>Centre Details</u></string>
+    <string name="poc_name_centre">Name </string>
+    <string name="poc_email_centre">Email </string>
+    <string name="link">http://192.168.43.5:8000</string>
+    <string name="notify_homepgae">Notify</string>
+</resources>

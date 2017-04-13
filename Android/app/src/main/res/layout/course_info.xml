@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/complete_center_info"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/course_id_courseinfo"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Course Details"
+                style="@style/complete_center_info_title"/>
+            <View style="@style/horizontal_line_completed"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="14dp"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:text="Course Name "
+                    style="@style/complete_center_detail_field"/>
+                <TextView
+                    android:id="@+id/course_name_courseinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/complete_center_detail_field"
+                    android:layout_weight="4"
+                    android:text="SDC_Rowta" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="14dp"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:text="Job Role "
+                    style="@style/complete_center_detail_field"/>
+                <TextView
+                    android:id="@+id/job_role_courseinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/complete_center_detail_field"
+                    android:layout_weight="4"
+                    android:hint="Job Role"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="14dp"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:text="Skill Sector :"
+                    style="@style/complete_center_detail_field"/>
+                <TextView
+                    android:id="@+id/skill_sector_courseinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/complete_center_detail_field"
+                    android:layout_weight="4"
+                    android:hint="Skill Sector" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="14dp"
+                android:weightSum="10">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:text="Course Level :"
+                    style="@style/complete_center_detail_field"/>
+                <TextView
+                    android:id="@+id/courselevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/complete_center_detail_field"
+                    android:layout_weight="4"
+                    android:hint="Course Level" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="14dp"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:text="No. Of Days :"
+                    style="@style/complete_center_detail_field"/>
+                <TextView
+                    android:id="@+id/days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/complete_center_detail_field"
+                    android:layout_weight="4"
+                    android:hint="No. Of Days" />
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="14dp"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:text="Min.Qualification:"
+                    style="@style/complete_center_detail_field"/>
+                <TextView
+                    android:id="@+id/minqualif"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/complete_center_detail_field"
+                    android:layout_weight="4"
+                    android:hint="Min.Qualification"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Batches under this course"
+                style="@style/complete_center_info_title"/>
+            <View style="@style/horizontal_line_completed"/>
+
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:scrollbars="vertical">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</ScrollView>

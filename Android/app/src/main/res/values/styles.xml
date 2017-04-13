@@ -1,0 +1,155 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+    <style name="RegistrationFormCard" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+
+    <style name="student_dashboard_section_title">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#e0000000</item>
+        <item name="android:fontFamily">Roboto</item>
+    </style>
+
+    <style name="single_course_card_layout">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="course_card_title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textColor">#c8000000</item>
+    </style>
+
+    <style name="course_card_description">
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:textColor">#b9000000</item>
+    </style>
+
+    <style name="horizontal_line_ongoing">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:background">@color/colorButton</item>
+    </style>
+
+    <style name="course_card_button_ongoing">
+        <item name="android:background">#b514b43c</item>
+        <item name="android:layout_weight">7.5</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="horizontal_line_completed">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:background">#1995b4</item>
+    </style>
+
+    <style name="course_card_button_completed">
+        <item name="android:background">#b51995b4</item>
+        <item name="android:layout_weight">7.5</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="feedback_field">
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="feedback_row">
+        <item name="android:paddingTop">6dp</item>
+    </style>
+
+    <style name="course_info">
+        <item name="android:padding">4dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#df000000</item>
+
+    </style>
+
+    <style name="course_info_field">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="training_center_list_card_layout">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="training_center_list_card_title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textColor">#c8000000</item>
+    </style>
+
+    <style name="training_center_list_card_field">
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:textColor">#b9000000</item>
+    </style>
+
+    <style name="browse_course_card_layout">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="browse_course_card_title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textColor">#c8000000</item>
+    </style>
+
+    <style name="browse_course_card_field">
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:textColor">#b9000000</item>
+    </style>
+
+    <style name="complete_center_info_title">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="complete_center_detail_field">
+        <item name="android:padding">6dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_dark">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow android:weightSum="1">
+
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="30dp"
+
+                        android:text="@string/about_ministry_of_skill_development_and_entrepreneurship"
+                        android:textColor="@android:color/black"
+                        android:textSize="25dp"
+
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="30dp"
+
+                        android:text="@string/the_changing_demographic_profile_of_the_country_with_54_of_its_population_under_25_years_of_age_rising_aspirations_of_the_youth_seeking_better_jobs_and_growing_expectations_of_employers_for_an_efficient_well_trained_workforce_have_contributed_to_a_focus_on_skill_development_in_india_recognising_the_urgency_to_reap_the_benefits_of_the_demographic_dividend_and_the_need_for_coordinating_skill_development_efforts_in_the_country_government_of_india_notified_the_formation_of_department_of_skill_development_and_entrepreneurship_on_31st_july_2014_that_became_a_full_fledged_ministry_of_skill_development_and_entrepreneurship_msde_on_9th_nov_2014_msde_is_responsible_for_coordination_with_all_concerned_for_developing_an_appropriate_skill_development_framework_removal_of_disconnect_between_demand_and_supply_of_skilled_manpower_mapping_of_existing_skills_doing_market_research_devising_training_curriculum_industry_institute_linkage_bringing_ppp_element_in_skilling_making_broad_policies_for_all_other_ministries_departments_framing_policies_for_soft_skills_computer_education_academic_equivalence_of_skill_sets_work_relating_to_industrial_training_institutes_itis_and_expansion_of_youth_entrepreneurship_education_the_ministry_aims_to_skill_on_a_large_scale_with_speed_and_high_standards_in_order_to_achieve_the_overarching_vision_of_a_skilled_india"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp"
+
+                        android:textStyle="italic" />
+                </TableRow>
+
+                <TableRow android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="30dp"
+
+                        android:text="About NSDC"
+                        android:textColor="@android:color/black"
+                        android:textSize="25dp"
+
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="30dp"
+
+                        android:text="The National Skill Development Corporation India, (NSDC) is a one of its kind, Public Private Partnership in India. It aims to promote skill development by catalyzing creation of large, quality, for-profit vocational institutions. NSDC provides funding to build scalable, for-profit vocational training initiatives. Its mandate is also to enable support systems such as quality assurance, information systems and train the trainer academies either directly or through partnerships"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp"
+
+                        android:textStyle="italic" />
+                </TableRow>
+
+                <TableRow android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="30dp"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp"
+
+                        android:textStyle="italic" />
+                </TableRow>
+
+
+            </TableLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
